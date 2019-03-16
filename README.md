@@ -7,7 +7,7 @@
 ![alt text](database_design.png)
 
 
-получить список модификаций последнего поколения bmw 5
+получить список модификаций последнего поколения bmw 5  
 SELECT MAX(model_year.year), cc.id FROM car_composition cc
 INNER JOIN model ON model.comp_id = cc.id
 INNER JOIN model_modifications ON model_modifications.model_id = model.id
@@ -15,7 +15,7 @@ INNER JOIN model_year ON model_year.model_id = model.id
 WHERE cc.name = "BMW" AND model.model_name = "x5" 
 
 
-получить список поколений mitsubishi lancer.
+получить список поколений mitsubishi lancer.  
 SELECT * FROM car_composition cc
 INNER JOIN model ON model.comp_id = cc.id
 INNER JOIN model_modifications ON model_modifications.model_id = model.id
